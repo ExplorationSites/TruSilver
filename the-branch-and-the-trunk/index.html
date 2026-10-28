@@ -42,7 +42,16 @@ em{font-style:italic}
 /* ticker */
 .ticker{background:var(--navy);color:#cfe0e8;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
 .ticker .wrap{display:flex;gap:2rem;flex-wrap:wrap;padding-top:.55rem;padding-bottom:.55rem}
-.ticker b{color:var(--accent);font-weight:600;letter-spacing:.06em}
+.ticker b{color:var(--accent);font-weight:600;letter-spacing:.06em}.ticker a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}.ticker a:hover,.ticker a:focus-visible{text-decoration-color:currentColor}.vid{margin:2.25rem 0 0;max-width:var(--col)}
+.yt{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;border:1px solid var(--rule)}
+.yt img{display:block;width:100%;height:100%;object-fit:cover}
+.yt-play{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0;padding:0;cursor:pointer}
+.yt-play::before{content:"";position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,0,0,.6);border:2px solid #fff;transition:background .15s}
+.yt-play::after{content:"";position:absolute;left:50%;top:50%;margin:-15px 0 0 -10px;border-left:26px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
+.yt-play:hover::before,.yt-play:focus-visible::before{background:rgba(0,0,0,.85)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid figcaption{margin-top:.75rem;font-size:.85rem;color:var(--ink-3)}
+.vid + .prose{margin-top:1.75rem}
 
 /* nav */
 .nav{border-bottom:1px solid var(--rule);background:var(--bg);position:sticky;top:0;z-index:20}
@@ -241,7 +250,7 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
  <a class="sb-btn" href="#cta">Get the assays</a>
 </div>
 <div class="ticker"><div class="wrap">
- <span><b>TSXV: TAG</b></span>
+ <span><b><a href="https://finance.yahoo.com/quote/TAG.V/" target="_blank" rel="noopener">TSXV: TAG</a></b></span>
 </div></div>
 
 <nav class="nav"><div class="wrap">
@@ -273,6 +282,13 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
   <h2 id="h02">Where did all that metal come from?</h2>
   <div class="prose"><p>That's the question this project starts from, and it's the reason there's a drill program at all.</p><p>Here's something many non-geologists might not already understand. The metal at Walton didn't begin where it was mined.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>Metal-bearing brine rises out of the deep basin along faults. It finds a bed of limestone it can chemically replace. Then it drops its load where the pH conditions change.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>So the plumbing matters just as much as the rock, if not more. There's a structure the fluid came up, and there are the places it spread out sideways once it got there.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>The carbonate replacement deposit classification is analogous to “Irish-Type”, after the belt in Ireland that hosts them.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>That isn't a stylistic comparison. Before the Atlantic opened, this ground and that ground were the same ground.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>A mine works whatever reaches surface. It doesn't get to choose.</p><p>Think of it like a tree.</p><p>Our reading is that Walton's operations worked one of the tree's <em>branches</em>. High in the system, and lucky enough to break surface where somebody could dig it in 1941.</p><p>Then the modern work started pointing somewhere else.</p><p>The surveys we ran in 2021 and 2024 found a large, dense anomaly at depth, southwest of the old workings.<a class="cite" href="#src5" aria-label="Source 5"><sup>5</sup></a></p><p>And the 2023 drill hole told us why the geometry is strange. This whole package has been folded and tipped over. That's what puts the deep part where it now sits, and why the rock sequence reads backwards in core.<a class="cite" href="#src6" aria-label="Source 6"><sup>6</sup></a></p><p>The trunk?</p><p>Put those together and you have the hypothesis this company was built to test.</p><p>Walton may have been a higher-level branch that happened to reach surface, with the trunk that fed it sitting deeper and to the southwest.</p><p>And as of now, no drill has ever been in it at depth.<a class="cite" href="#src5" aria-label="Source 5"><sup>5</sup></a></p><p>The academic economic geology view on this target is blunt: it has to be drilled.There's exactly one instrument that settles the rest.<a class="cite" href="#src6" aria-label="Source 6"><sup>6</sup></a></p><p>That's what the drill is for. To prove our theory correct.</p></div>
   <figure class="fig"><picture><source type="image/webp" srcset="img/fig-section.webp"><img src="img/fig-section.jpg" alt="West to east cross section through the Sturgis-Walton Silver Project." loading="lazy" data-full="img/fig-section.jpg" width="2198" height="2198"></picture><figcaption>West to east cross section through the Sturgis-Walton Silver Project. <span class="credit">TruSilver Metals Corp.</span><span class="zoomhint">Tap to enlarge</span></figcaption></figure>
+  <figure class="vid" id="debrief">
+ <div class="yt" data-yt="FrOEhEgNfXM">
+  <picture><source type="image/webp" srcset="img/debrief-ep1.webp"><img src="img/debrief-ep1.jpg" alt="The Debrief, Episode 1: Jeff Burke, Project Geologist, TruSilver Metals Corp." loading="lazy" width="1280" height="720"></picture>
+  <button type="button" class="yt-play" aria-label="Play The Debrief, Episode 1, with Jeff Burke"></button>
+ </div>
+ <figcaption>The Debrief, Episode 1, with Project Geologist Jeff Burke. From TruSilver’s YouTube channel.</figcaption>
+</figure>
  </div>
 </section><div class="midcta"><div class="wrap"><span>Want the assays when they land? <a href="#cta">Join the list</a>.</span></div></div><section class="sec" id="s03" aria-labelledby="h03">
  <div class="wrap">
@@ -484,4 +500,5 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
  });
 })();
 </script>
+<script>(function(){var w=document.querySelector('.yt');if(!w)return;var b=w.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+w.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title='The Debrief, Episode 1';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');w.innerHTML='';w.appendChild(f);try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'video_play',video:'debrief-ep1'});}catch(e){}});})();</script>
 </body></html>

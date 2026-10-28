@@ -227,6 +227,18 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
 /* Angle 8 additions: the at-a-glance strip, in-body tables, the three-number band, the figure table, the quote, the pull quote */
 .ticker .wrap{gap:.2rem 1.5rem}
 @media(max-width:44rem){.ticker .tk-co{display:none}}
+.ticker a{color:inherit;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+.ticker a:hover,.ticker a:focus-visible{text-decoration-color:currentColor}
+.vid{margin:2.25rem 0 0;max-width:var(--col)}
+.yt{position:relative;aspect-ratio:16/9;background:#000;overflow:hidden;border:1px solid var(--rule)}
+.yt img{display:block;width:100%;height:100%;object-fit:cover}
+.yt-play{position:absolute;inset:0;width:100%;height:100%;background:transparent;border:0;padding:0;cursor:pointer}
+.yt-play::before{content:"";position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,0,0,.6);border:2px solid #fff;transition:background .15s}
+.yt-play::after{content:"";position:absolute;left:50%;top:50%;margin:-15px 0 0 -10px;border-left:26px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent}
+.yt-play:hover::before,.yt-play:focus-visible::before{background:rgba(0,0,0,.85)}
+.yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid figcaption{margin-top:.75rem;font-size:.85rem;color:var(--ink-3)}
+.vid + .prose{margin-top:1.75rem}
 .glance{background:var(--pale);padding:2.25rem 0}
 .glance .eyebrow{margin-bottom:.75rem}
 .dtable table{width:100%;max-width:var(--col);border-collapse:collapse;font-size:.95rem;margin:1rem 0 1.4rem;min-width:0}
@@ -269,7 +281,7 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
 </div>
 <div class="ticker"><div class="wrap">
  <span class="tk-co">TruSilver Metals Corp.</span>
- <span><b>TSXV: TAG</b></span>
+ <span><b><a href="https://finance.yahoo.com/quote/TAG.V/" target="_blank" rel="noopener">TSXV: TAG</a></b></span>
  <span>Sturgis-Walton Silver Project, Nova Scotia</span>
 </div></div>
 
@@ -305,7 +317,13 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
  <div class="wrap">
   <p class="eyebrow">Jim and Jeff</p>
   <h2 id="h02">Jim knows the ground, and Jeff keeps bringing him questions.</h2>
-  <div class="prose"><p>Jim Michaelis has spent more than 40 years on Walton-Sturgis, with Gulf and then Billiton, and he built the fold model behind our 2023 hole.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> By the time Jeff arrived, Jim had already digitized the archive, saving months (if not years) of prep time. We’re talking decades of drill logs and mine records, ready to use for Jeff on day one.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>Jeff came in with 20 years in exploration, six of them in AI start-ups.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> He takes a geological workflow, the steps he’d work through by hand, and turns it into code. “That turns into a script, and we can use that in almost any interface.”<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a> So instead of waiting on a developer, or relying on third-party IP, he builds the tool himself and puts the surveys, the chemistry and the old drill logs on one screen.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>Then he takes what he finds to Jim. The way Jeff tells it, his research turns up something odd, he asks about it, and Jim says, “Well, you know what? I did see something like this.”, and according to Jeff, “That’s when the magic starts to happen.”<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>The duo talks most days, and they’ve been in the field together. That’s a hand-off most projects never get; usually the knowledge leaves with the people who had it.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a> As our presentation puts it, most of our team lives an hour from the drill.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> Here are <a href="https://www.trusilvermetals.com/the-geologist-the-team-and-who-owns-the-shares">the people behind TruSilver and who owns its shares</a>.</p></div>
+  <div class="prose"><p>Jim Michaelis has spent more than 40 years on Walton-Sturgis, with Gulf and then Billiton, and he built the fold model behind our 2023 hole.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> By the time Jeff arrived, Jim had already digitized the archive, saving months (if not years) of prep time. We’re talking decades of drill logs and mine records, ready to use for Jeff on day one.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>Jeff came in with 20 years in exploration, six of them in AI start-ups.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> He takes a geological workflow, the steps he’d work through by hand, and turns it into code. “That turns into a script, and we can use that in almost any interface.”<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a> So instead of waiting on a developer, or relying on third-party IP, he builds the tool himself and puts the surveys, the chemistry and the old drill logs on one screen.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>Then he takes what he finds to Jim. The way Jeff tells it, his research turns up something odd, he asks about it, and Jim says, “Well, you know what? I did see something like this.”, and according to Jeff, “That’s when the magic starts to happen.”<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a></p><p>The duo talks most days, and they’ve been in the field together. That’s a hand-off most projects never get; usually the knowledge leaves with the people who had it.<a class="cite" href="#src3" aria-label="Source 3"><sup>3</sup></a> As our presentation puts it, most of our team lives an hour from the drill.<a class="cite" href="#src1" aria-label="Source 1"><sup>1</sup></a> Here are <a href="https://www.trusilvermetals.com/the-geologist-the-team-and-who-owns-the-shares">the people behind TruSilver and who owns its shares</a>.</p></div><figure class="vid" id="debrief">
+ <div class="yt" data-yt="FrOEhEgNfXM">
+  <picture><source type="image/webp" srcset="img/debrief-ep1.webp"><img src="img/debrief-ep1.jpg" alt="The Debrief, Episode 1: Jeff Burke, Project Geologist, TruSilver Metals Corp." loading="lazy" width="1280" height="720"></picture>
+  <button type="button" class="yt-play" aria-label="Play The Debrief, Episode 1, with Jeff Burke"></button>
+ </div>
+ <figcaption>The Debrief, Episode 1, with Project Geologist Jeff Burke. From TruSilver’s YouTube channel.</figcaption>
+</figure>
  </div>
 </section>
 <div class="midcta"><div class="wrap"><div class="mc-inner"><span class="mc-lead">We’ll send you our drill results as soon as they’re public.</span><a class="mc-btn" href="#cta">Send me the drill results</a></div></div></div>
@@ -436,6 +454,7 @@ figcaption{font-size:.82rem;color:var(--ink-3);margin-top:.65rem}
  update();
 })();
 </script>
+<script>(function(){var w=document.querySelector('.yt');if(!w)return;var b=w.querySelector('.yt-play');if(!b)return;b.addEventListener('click',function(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+w.getAttribute('data-yt')+'?autoplay=1&rel=0';f.title='The Debrief, Episode 1';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.setAttribute('allowfullscreen','');w.innerHTML='';w.appendChild(f);try{window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'video_play',video:'debrief-ep1'});}catch(e){}});})();</script>
 
 <script>(function(){var nav=document.querySelector('nav.nav'),band=document.querySelector('.midcta');if(!nav||!band)return;function tick(){var r=band.getBoundingClientRect();if(r.top<=nav.offsetHeight){nav.classList.add('released');}else{nav.classList.remove('released');}}window.addEventListener('scroll',tick,{passive:true});window.addEventListener('resize',tick);tick();})();</script>
 
